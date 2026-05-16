@@ -46,9 +46,9 @@ config.info = {
     author: 'Aizen 👑'
   },
   images: [
-    "",
-    "",
-    ""
+    "https://images.gemini.googleusercontent.com/web/1000097751.png",
+    "https://images.gemini.googleusercontent.com/web/1000097751.png ",
+    "https://images.gemini.googleusercontent.com/web/1000097751.png "
   ]
 };
 

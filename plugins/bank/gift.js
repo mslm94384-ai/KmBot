@@ -1,7 +1,7 @@
 const rewards = {
-    daily: { xp: 100, cookies: 5, cooldown: 86400000, name: '☀️ يومي', icon: '🌅', border: '☀️' },
-    weekly: { xp: 500, cookies: 25, cooldown: 604800000, name: '📆 اسبوعي', icon: '🗓️', border: '📅' },
-    monthly: { xp: 2000, cookies: 100, cooldown: 2592000000, name: '🌙 شهري', icon: '🌟', border: '🌙' }
+    daily: { xp: 100, cookies: 5, cooldown: 86400000, name: '☀️ يومي', icon: '🌅', border: '⚔️' },
+    weekly: { xp: 500, cookies: 25, cooldown: 604800000, name: '📆 اسبوعي', icon: '🗓️', border: '🔥' },
+    monthly: { xp: 2000, cookies: 100, cooldown: 2592000000, name: '🌙 شهري', icon: '🌟', border: '🧛' }
 };
 
 const getTimeRemaining = (lastClaim, cooldown) => {
@@ -40,7 +40,7 @@ const handler = async (m, { conn, command }) => {
     if (lastClaim && (now - lastClaim) < reward.cooldown) {
         const remaining = getTimeRemaining(lastClaim, reward.cooldown);
         const timeLeft = formatTime(remaining);
-        await m.reply(`*❌ انتظـر ${timeLeft} لاستلام الهدية ${reward.name}*`);
+        await m.reply(`⚔️ *انتظـر ${timeLeft} يا جندي لاستلام الهدية ${reward.name}* 🔥`);
         return;
     }
     
@@ -61,7 +61,7 @@ const handler = async (m, { conn, command }) => {
 
 ╭─┈─┈─┈─⟞${reward.border}⟝─┈─┈─┈─╮
 ┃ *تـسـتـقـبـل هـديـتك الـقـادمـة بـعـد* 🚀
-╰─┈─┈─┈─⟞✨⟝─┈─┈─┈─╯`;
+╰─┈─┈─┈─⟞🧛⟝─┈─┈─┈─╯`;
 
     await conn.sendMessage(m.chat, {
         image: { url: profilePic },
@@ -71,8 +71,8 @@ const handler = async (m, { conn, command }) => {
             isForwarded: true,
             forwardingScore: 1,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363225356834044@newsletter',
-                newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+                newsletterJid: '0029VbCoE0P8aKvPbZf8hU1D@newsletter',
+                newsletterName: '𝐄𝐒𝟕 🧛',
                 serverMessageId: 0
             }
         }

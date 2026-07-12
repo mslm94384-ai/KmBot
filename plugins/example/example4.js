@@ -1,50 +1,50 @@
 const example = async (m, { conn }) => {
 
 await conn.sendCarousel(m.chat, {
-  headerText: '📸 Image Gallery',
-  globalFooterText: 'Swipe to see more →',
+  headerText: '🦇 معرض الظلام 🧛',
+  globalFooterText: 'اسحب لترى المزيد → 🌙',
   cards: [
     {
       imageUrl: 'https://g.top4top.io/p_3700yob0b1.jpg',
-      bodyText: '*Anime Girl 1*',
-      footerText: '🌸 Cute anime style',
+      bodyText: '*🧟 مخلود 1*',
+      footerText: '🦇 ساكن الليل',
       buttons: [
-        { name: 'quick_reply', params: { display_text: '👍 Like', id: 'like1' } },
-        { name: 'cta_url', params: { display_text: '🔗 Download', url: 'https://example.com/img1' } }
+        { name: 'quick_reply', params: { display_text: '👍 يعجبني', id: 'like1' } },
+        { name: 'cta_url', params: { display_text: '🔗 تحميل', url: 'https://example.com/img1' } }
       ]
     },
     {
       imageUrl: 'https://h.top4top.io/p_37009f24s1.jpg',
-      bodyText: '*Anime Girl 2*',
-      footerText: '✨ Beautiful character',
+      bodyText: '*🧟 مخلود 2*',
+      footerText: '🌙 سيد الظلام',
       buttons: [
-        { name: 'quick_reply', params: { display_text: '❤️ Love', id: 'love2' } },
-        { name: 'cta_copy', params: { display_text: '📋 Copy URL', copy_code: 'https://example.com/img2' } }
+        { name: 'quick_reply', params: { display_text: '❤️ حب', id: 'love2' } },
+        { name: 'cta_copy', params: { display_text: '📋 نسخ الرابط', copy_code: 'https://example.com/img2' } }
       ]
     },
 {
       mediaUrl: 'https://qu.ax/x/6GwxA.mp4',
       mediaType: 'video',
-      bodyText: 'Intro Video',
+      bodyText: '🧛 فيديو الظلام',
       buttons: [
-        { name: 'cta_url', params: { display_text: 'Details', url: 'https://example.com/details' } }
+        { name: 'cta_url', params: { display_text: 'تفاصيل', url: 'https://example.com/details' } }
       ]
     },
     {
       imageUrl: 'https://i.top4top.io/p_37000qovy1.jpg',
-      bodyText: '*Anime Girl 3*',
-      footerText: '🎨 Amazing artwork',
+      bodyText: '*🧟 مخلود 3*',
+      footerText: '🦇 فنان الظلام',
       buttons: [
         { 
           name: 'single_select', 
           params: { 
-            title: '📁 More Options',
+            title: '📁 خيارات إضافية',
             sections: [{
-              title: 'Choose action',
+              title: 'اختر الإجراء',
               rows: [
-                { title: 'Save to gallery', id: 'save3' },
-                { title: 'Share with friend', id: 'share3' },
-                { title: 'Report image', id: 'report3' }
+                { title: 'حفظ في المعرض', id: 'save3' },
+                { title: 'مشاركة مع صديق', id: 'share3' },
+                { title: 'الإبلاغ عن الصورة', id: 'report3' }
               ]
             }]
           } 
@@ -54,8 +54,8 @@ await conn.sendCarousel(m.chat, {
   ],
   mentions: [m.sender],
   newsletter: {
-      name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-      jid: '120363225356834044@newsletter'
+      name: '𝐄𝐒𝟕 🧛',
+      jid: '0029VbCoE0P8aKvPbZf8hU1D@newsletter'
     },
 }, m)
 

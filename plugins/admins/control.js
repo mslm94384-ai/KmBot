@@ -28,7 +28,7 @@ let control = async (m, { command, text, conn, bot, participants }) => {
             return m.reply("*✅ تمت الإضافة*");
         }
         
-        if (command === "طرد") {
+        if (command === "انطر") {
             let user = getUser();
             if (!user) return m.reply("❌ منشن أو رد على العضو");
             
@@ -41,14 +41,14 @@ let control = async (m, { command, text, conn, bot, participants }) => {
             return m.reply("✅ تم الطرد");
         }
         
-        if (command === "رفع") {
+        if (command === "رفاعي") {
             let user = getUser();
             if (!user) return m.reply("❌ منشن أو رد على العضو");
             await conn.groupParticipantsUpdate(m.chat, [user], 'promote');
             return m.reply("✅ تم الرفع");
         }
         
-        if (command === "خفض") {
+        if (command === "ريح") {
             let user = getUser();
             if (!user) return m.reply("❌ منشن أو رد على العضو");
             await conn.groupParticipantsUpdate(m.chat, [user], 'demote');
@@ -60,9 +60,10 @@ let control = async (m, { command, text, conn, bot, participants }) => {
     }
 };
 
-control.usage = ['ضيف', 'طرد', 'رفع', 'خفض'];
-control.command = ['ضيف', 'طرد', 'رفع', 'خفض'];
+control.usage = ['ضيف', 'انطر', 'رفاعي', 'ريح'];
+control.command = ['ضيف', 'انطر', 'رفاعي', 'ريح'];
 control.admin = true;
 control.botAdmin = true;
 control.category = "admin";
+
 export default control;

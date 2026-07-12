@@ -1,7 +1,7 @@
-export default async function before(m, { conn , bot }) {
+export default async function before(m, { conn, bot }) {
   const triggers = {
-    "ڤينوم": ["📂", "🗃️", "☕", "🪐", "🐍"],
-    "ڤيني": ["🎼", "🎪", "🎨", "🎯", "🎲"]
+    "دياز": ["📂", "🗃️", "☕", "🪐", "🐍"],
+    "ايرن": ["🎼", "🎪", "🎨", "🎯", "🎲"]
   };
 
   const emojis = triggers[m.text];
@@ -9,6 +9,6 @@ export default async function before(m, { conn , bot }) {
     const random = emojis[Math.floor(Math.random() * emojis.length)];
     m.react(random);
   }
-  
+
   return false;
 }

@@ -7,17 +7,17 @@ const handler = async (m, { conn, command, text }) => {
     
     if (command === "تسجيل") {
         if (!text) {
-            return m.reply(`*📝 طريقة التسجيل:*\n\nتسجيل الاسم|العمر\n\nمثال:\nتسجيل ڤينوم|20`);
+            return m.reply(`🧛 *طريقة التسجيل في عالم الظلام:* 🦇\n\nتسجيل الاسم|العمر\n\nمثال:\nتسجيل إيرن|20`);
         }
         
         const [name, age] = text.split('|').map(s => s.trim());
         
         if (!name || !age) {
-            return m.reply(`*❌ خطأ:* يجب كتابة الاسم والعمر مفصولين بـ |\n\nمثال:\nتسجيل ڤينوم|20`);
+            return m.reply(`🧟 *خطأ:* يجب كتابة الاسم والعمر مفصولين بـ |\n\nمثال:\nتسجيل إيرن|20`);
         }
         
         if (isNaN(age) || age < 1 || age > 30) {
-            return m.reply(`*❌ خطأ:* العمر يجب أن يكون رقماً بين 1 و 30`);
+            return m.reply(`🦇 *خطأ:* العمر يجب أن يكون رقماً بين 1 و 30`);
         }
         
         user.name = name;
@@ -25,17 +25,17 @@ const handler = async (m, { conn, command, text }) => {
         
         const profilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => 'https://i.pinimg.com/originals/11/26/97/11269786cdb625c60213212aa66273a9.png');
         
-        const msg = `╭─┈─┈─┈─⟞📝⟝─┈─┈─┈─╮
-┃ *✅ تـم الـتـسـجـيـل بـنـجـاح*
-╰─┈─┈─┈─⟞✨⟝─┈─┈─┈─╯
+        const msg = `╭─┈─┈─┈─⟞🧛⟝─┈─┈─┈─╮
+┃ *✅ تـم الـتـسـجـيـل فـي الـظـلام*
+╰─┈─┈─┈─⟞🦇⟝─┈─┈─┈─╯
 
 ┃ @${m.sender.split('@')[0]}
 ┃ 🏷️ *الاسـم:* ${name}
 ┃ 📅 *الـعـمـر:* ${age} سنة
 
-╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ *أهـلاً وسـهـلاً فـي الـسـيـرك* 🎭
-╰─┈─┈─┈─⟞🤡⟝─┈─┈─┈─╯`;
+╭─┈─┈─┈─⟞🧛⟝─┈─┈─┈─╮
+┃ *أهـلاً وسـهـلاً فـي عـالـم الـظـلام* 🌙
+╰─┈─┈─┈─⟞🧟⟝─┈─┈─┈─╯`;
 
         await conn.sendMessage(m.chat, {
             image: { url: profilePic },
@@ -45,13 +45,13 @@ const handler = async (m, { conn, command, text }) => {
                 isForwarded: true,
                 forwardingScore: 1,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363225356834044@newsletter',
-                    newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+                    newsletterJid: '0029VbCoE0P8aKvPbZf8hU1D@newsletter',
+                    newsletterName: '𝐄𝐒𝟕 🧛',
                     serverMessageId: 0
                 },
                 externalAdReply: {
-                    title: "𝐏𝐎𝐌𝐍𝐈-𝐀𝐈 🎪 | الـسـيـرك الـرقـمـي",
-                    body: "تـسـجـيـل جـديـد فـي الـسـيـرك",
+                    title: "𝐄𝐒𝟕 🧛 | عالم الظلام",
+                    body: "تـسـجـيـل جـديـد فـي عـالـم الـظـلام",
                     thumbnailUrl: profilePic,
                     sourceUrl: '',
                     mediaType: 1,
@@ -63,7 +63,7 @@ const handler = async (m, { conn, command, text }) => {
     
     else if (command === "حذف_تسجيلي") {
         if (!user.name && !user.age) {
-            return m.reply(`*❌ ليس لديك تسجيل لحذفه*\n\nاكتب .تسجيل اسم|عمر للتسجيل`);
+            return m.reply(`🦇 *ليس لديك تسجيل في عالم الظلام لحذفه*\n\nاكتب .تسجيل اسم|عمر للتسجيل`);
         }
         
         delete user.name;
@@ -73,14 +73,14 @@ const handler = async (m, { conn, command, text }) => {
         
         const msg = `╭─┈─┈─┈─⟞🗑️⟝─┈─┈─┈─╮
 ┃ *✅ تـم حـذف الـتـسـجـيـل*
-╰─┈─┈─┈─⟞✨⟝─┈─┈─┈─╯
+╰─┈─┈─┈─⟞🦇⟝─┈─┈─┈─╯
 
 ┃ @${m.sender.split('@')[0]}
-┃ 🏷️ تم حذف بياناتك بنجاح
+┃ 🏷️ تم حذف بياناتك من الظلام
 
-╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
-┃ *يـمـكـنـك الـتـسـجـيـل مـرة أخـرى* 📝
-╰─┈─┈─┈─⟞🤡⟝─┈─┈─┈─╯`;
+╭─┈─┈─┈─⟞🧛⟝─┈─┈─┈─╮
+┃ *يـمـكـنـك الـتـسـجـيـل مـرة أخـرى* 🌙
+╰─┈─┈─┈─⟞🧟⟝─┈─┈─┈─╯`;
 
         await conn.sendMessage(m.chat, {
             image: { url: profilePic },
@@ -90,12 +90,12 @@ const handler = async (m, { conn, command, text }) => {
                 isForwarded: true,
                 forwardingScore: 1,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363225356834044@newsletter',
-                    newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+                    newsletterJid: '0029VbCoE0P8aKvPbZf8hU1D@newsletter',
+                    newsletterName: '𝐄𝐒𝟕 🧛',
                     serverMessageId: 0
                 },
                 externalAdReply: {
-                    title: "𝐏𝐎𝐌𝐍𝐈-𝐀𝐈 🎪 | الـسـيـرك الـرقـمـي",
+                    title: "𝐄𝐒𝟕 🧛 | عالم الظلام",
                     body: "تـم حـذف الـتـسـجـيـل",
                     thumbnailUrl: profilePic,
                     sourceUrl: '',

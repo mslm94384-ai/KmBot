@@ -32,14 +32,14 @@ const context = (jid, img) => ({
     forwardingScore: 1,
     forwardedNewsletterMessageInfo: {
         newsletterJid: '120363225356834044@newsletter',
-        newsletterName: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+        newsletterName: '𝐄𝐫𝐢𝐧 𝐁𝐨𝐭 🧛‍♂️🧟‍♀️',
         serverMessageId: 0
     },
     externalAdReply: {
-        title: "𝐏𝐎𝐌𝐍𝐈-𝐀𝐈 🎪 | 𝐁𝐨𝐭 𝐢𝐬 𝐛𝐮𝐢𝐥𝐭 𝐨𝐧 𝐭𝐡𝐞 𝐖𝐒/𝐕𝐈𝐈 𝐟𝐫𝐚𝐦𝐞𝐰𝐨𝐫𝐤",
-        body: "𝚆𝚑𝚊𝚝𝚜𝙰𝚙𝚙 𝚋𝚘𝚝 𝚝𝚑𝚊𝚝 𝚒𝚜 𝚎𝚊𝚜𝚢 𝚝𝚘 𝚖𝚘𝚍𝚒𝚏𝚢 𝚊𝚗𝚍 𝚟𝚎𝚛𝚢 𝚏𝚊𝚜𝚝",
+        title: "𝐄𝐑𝐈𝐍 🧛‍♂️ | 𝐕𝐚𝐦𝐩𝐢𝐫𝐞 & 𝐙𝐨𝐦𝐛𝐢𝐞 𝐁𝐨𝐭 🧟‍♀️",
+        body: "⚰️ 𝙱𝚘𝚝 𝚘𝚏 𝚝𝚑𝚎 𝚞𝚗𝚍𝚎𝚊𝚍 𝚊𝚗𝚍 𝚍𝚊𝚛𝚔𝚗𝚎𝚜𝚜 🦇",
         thumbnailUrl: img,
-        sourceUrl: '',
+        sourceUrl: 'https://whatsapp.com/channel/0029Vb3UUKz3QxS3bgWmTc3x', // رابط قناتك الجديدة
         mediaType: 1,
         renderLargerThumbnail: true
     }
@@ -58,7 +58,7 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
     
     if (!selected && !args[0]) {
         const sections = [{
-            title: "🌳 ~ الاقـسـام ~ 🪾",
+            title: "🧛‍♂️ ~ الاقـسـام ~ 🧟‍♀️",
             rows: CATEGORIES.map(c => ({
                 title: `${c[0]} ~ ${c[1]} ${c[3]}`,
                 description: `اضغط لعرض أوامر قسم ${c[1]}`,
@@ -67,13 +67,14 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
         }];
 
         const menuText = `
-رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ
+🧛‍♂️ رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ 🧟‍♀️
 وَلَا تَجْعَلْ فِي قُلُوبِنَا غِلًّا لِّلَّذِينَ آمَنُوا رَبَّنَا إِنَّكَ رَءُوفٌ رَّحِيمٌ
-╭─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╮
+╭─┈─┈─┈─⟞🦇⟝─┈─┈─┈─╮
 ┃ ⌯🍂︙ اهـلا → *[ @${m.sender.split("@")[0]} ]*
-┃ ⌯🚀︙ الـتشـغـيـل → ${uptimeFormatted}
-┃ ⌯👾︙ الـتـاريـخ → ${date} - ${time}
-╰─┈─┈─┈─⟞🎪⟝─┈─┈─┈─╯
+┃ ⌯⏳︙ الـتشـغـيـل → ${uptimeFormatted}
+┃ ⌯📅︙ الـتـاريـخ → ${date} - ${time}
+┃ ⌯👻︙ الـبـوت → 𝐄𝐫𝐢𝐧 🧛‍♂️
+╰─┈─┈─┈─⟞🦇⟝─┈─┈─┈─╯
 > *_اختار قسم من القائمة عشان يبعتلك اوامر القسم_*`;
         
         await conn.sendButtonNormal(m.chat, {
@@ -83,13 +84,13 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
             buttons: [{
                 name: "single_select",
                 params: {
-                    title: "🍂✨",
+                    title: "🧛‍♂️✨🧟‍♀️",
                     sections: sections
                 }
             }],
             mentions: [m.sender],
             newsletter: {
-                name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
+                name: '𝐄𝐫𝐢𝐧 𝐁𝐨𝐭 🧛‍♂️🧟‍♀️',
                 jid: '120363225356834044@newsletter'
             }
         }, global.reply_status);
@@ -98,7 +99,7 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
 
     const cat = getCat(selected);
     if (!cat) {
-        await conn.sendMessage(m.chat, { text: '*❌ اختار رقم صحيح من 1 لـ 15*', contextInfo: context(m.sender, getImg(bot)) }, { quoted: m });
+        await conn.sendMessage(m.chat, { text: '*❌ اختار رقم صحيح من 1 لـ 18*', contextInfo: context(m.sender, getImg(bot)) }, { quoted: m });
         return;
     }
 
@@ -120,7 +121,7 @@ const uptimeFormatted = `${String(hours).padStart(2, '0')}:${String(minutes).pad
 ${cmdsList}
 
 ╭─┈─┈─┈─⟞${cat[3]}⟝─┈─┈─┈─╮
-┃ *⌯︙𝐕𝐈𝐈7 ~ ${bot?.config?.info?.nameBot || 'POMNI-AI'}*
+┃ *⌯︙𝐄𝐫𝐢𝐧 🦇 ~ ${bot?.config?.info?.nameBot || '𝐄𝐑𝐈𝐍'}*
 ╰─┈─┈─┈─⟞${cat[3]}⟝─┈─┈─┈─╯
 > *رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا*`.trim(), contextInfo: context(m.sender, getImg(bot)) }, { quoted: m });
 }

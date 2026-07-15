@@ -5,18 +5,18 @@ import sub from './sub.js';
 
 /* =========== Client ========== */
 const client = new Client({
-  phoneNumber: '20123456789', // Bot number
+  phoneNumber: '201044013292', // Bot number (تم التحديث)
   prefix: [".", "/", "!"],
-  fromMe: false, 
+  fromMe: true, // عشان البوت يرد على نفسه (تم التحديث)
   owners: [
-  // Owner 1
-    { name: "VA", lid: "247579682029763@lid", jid: "972569311531@s.whatsapp.net" },
-  // Owner 2
-    { name: "emam", lid: "221307316789354@lid", jid: "201144480436@s.whatsapp.net" },
-  // Owner 3
-    { name: "Sukuna", jid: "201033024135@s.whatsapp.net", lid: "50414477168824@lid" },
-  // Owner 4 
-   { name: "عمورتي", jid: "201050079089@s.whatsapp.net", lid: "51664513925368@lid" }
+  // Owner 1 - فليكس
+    { name: "Flex", lid: "247579682029763@lid", jid: "201224565250@s.whatsapp.net" },
+  // Owner 2 - سوكونا
+    { name: "Sukuna", lid: "221307316789354@lid", jid: "201044013292@s.whatsapp.net" },
+  // Owner 3 - ÄĻÏ MËĐȞÄȚ
+    { name: "ÄĻÏ MËĐȞÄȚ", jid: "201276395524@s.whatsapp.net", lid: "50414477168824@lid" },
+  // Owner 4 - ايرن
+   { name: "Erin", jid: "201227812859@s.whatsapp.net", lid: "51664513925368@lid" }
   ],
   settings: { noWelcome: false },
   commandsPath: './plugins'
@@ -33,17 +33,17 @@ if (!global.db) {
 /* =========== Config ========== */
 const { config } = client;
 config.info = { 
-  nameBot: "♡ 𝙋𝙊𝙈𝙉𝙄 🎪 〈", 
-  nameChannel: "𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️", 
+  nameBot: "♡ 𝙀𝙍𝙄𝙉 🧛‍♂️ 〈", // تم التغيير من بومني لـ Erin
+  nameChannel: "𝐄𝐫𝐢𝐧 𝐁𝐨𝐭 🧛‍♂️🧟‍♀️", // تم التغيير
   idChannel: "120363225356834044@newsletter",
   urls: {
     repo: "https://github.com/deveni0/Pomni-AI",
     api: "https://emam-api.web.id",
-    channel: "https://whatsapp.com/channel/0029VaQim2bAu3aPsRVaDq3v"
+    channel: "https://whatsapp.com/channel/0029Vb3UUKz3QxS3bgWmTc3x" // رابط قناتك الجديدة
   },
   copyright: { 
-    pack: 'ڤـ ـ VA ـ ـا', 
-    author: 'VA'
+    pack: '𝐄𝐑𝐈𝐍 🦇', // تم التغيير
+    author: 'Erin' // تم التغيير
   },
   images: [
     "https://i.pinimg.com/originals/11/26/97/11269786cdb625c60213212aa66273a9.png",

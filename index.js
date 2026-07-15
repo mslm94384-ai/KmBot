@@ -5,12 +5,12 @@ import sub from './sub.js';
 
 /* =========== Client ========== */
 const client = new Client({
-  phoneNumber: '201044013292', // Bot number (تم التحديث)
+  phoneNumber: '201110302392', // Bot number (تم التحديث)
   prefix: [".", "/", "!"],
   fromMe: true, // عشان البوت يرد على نفسه (تم التحديث)
   owners: [
-  // Owner 1 - فليكس
-    { name: "Flex", lid: "247579682029763@lid", jid: "201224565250@s.whatsapp.net" },
+  // Owner 1 - الكساندر؟ 
+    { name: "Flex", lid: "247579682029763@lid", jid: "201110302392@s.whatsapp.net" },
   // Owner 2 - سوكونا
     { name: "Sukuna", lid: "221307316789354@lid", jid: "201044013292@s.whatsapp.net" },
   // Owner 3 - ÄĻÏ MËĐȞÄȚ
